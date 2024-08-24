@@ -1,0 +1,24 @@
+
+v1:[1,0]$
+v2:[1,1]$
+S:[v1,v2]$
+M:apply('matrix,S)$
+print("Given Set of Vectors is S=", setify(S))$
+if rank(M)=length(S) then print("Given set of vectors is Linearly Independent")
+else print("Given set of vectors is Linearly Dependent")$
+Output:
+𝐺𝑖𝑣𝑒𝑛 𝑆𝑒𝑡 𝑜𝑓 𝑉𝑒𝑐𝑡𝑜𝑟𝑠 𝑖𝑠 𝑆 = {[1,0],[1,1]}
+𝐺𝑖𝑣𝑒𝑛 𝑠𝑒𝑡 𝑜𝑓 𝑣𝑒𝑐𝑡𝑜𝑟𝑠 𝑖𝑠 𝐿𝑖𝑛𝑒𝑎𝑟𝑙𝑦 𝐼𝑛𝑑𝑒𝑝𝑒𝑛𝑑𝑒𝑛𝑡
+Problem 2. Write a program to check whether 𝑆 = {(1,1,2,4), (2, −1, −5,2), (1, −1, −4,0), (2,1,1,6)} is 
+linearly independent or not where 𝑆 ⊆ 𝑅
+4
+Program: 
+v1:[1,1,2,4]$
+v2:[2,-1,-5,2]$
+v3:[1,-1,-4,0]$
+v4:[2,1,1,6]$
+S:[v1,v2,v3,v4]$
+M:apply('matrix,S)$
+print("Given Set of Vectors is S=", setify(S))$
+if rank(M)=length(S) then print("Given set of vectors is Linearly Independent")
+else print("Given set of vectors is Linearly Dependent")$
