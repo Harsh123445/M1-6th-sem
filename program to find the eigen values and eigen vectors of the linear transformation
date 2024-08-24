@@ -1,0 +1,48 @@
+
+𝑻:𝑹
+𝟐 ⟶ 𝑹
+𝟐 defined by 𝑻(𝒙, 𝒚) = (𝟒𝒚 + 𝒙, 𝟑𝒚 + 𝟐𝒙)
+Program: 
+T(x):=[x[1]+4*x[2],2*x[1]+3*x[2]]$
+X:[x,y]$
+B:[[1,0],[0,1]]$
+L:makelist(T(B[i]),i,1,length(B))$
+M:transpose(apply('matrix,L))$
+[vals, vecs]:eigenvectors(M)$
+N:[["Eigen Value","Multiplicity","Linearly Independent Eigen vectors"]]$
+N(i):=[λ[i]=vals[1][i],vals[2][i],setify(vecs[i])]$
+for i thru length(vals[1]) do N:push(N(i),N)$
+print("Given Linear Transformation is T(x,y)=",T(X))$
+table_form(reverse(N))$
+
+Output:
+𝐺𝑖𝑣𝑒𝑛 𝐿𝑖𝑛𝑒𝑎𝑟 𝑇𝑟𝑎𝑛𝑠𝑓𝑜𝑟𝑚𝑎𝑡𝑖𝑜𝑛 𝑖𝑠 𝑇(𝑥, 𝑦) = [4𝑦 + 𝑥, 3𝑦 + 2𝑥]
+𝐸𝑖𝑔𝑒𝑛 𝑉𝑎𝑙𝑢𝑒 𝑀𝑢𝑙𝑡𝑖𝑝𝑙𝑖𝑐𝑖𝑡𝑦 𝐿𝑖𝑛𝑒𝑎𝑟𝑙𝑦 𝐼𝑛𝑑𝑒𝑝𝑒𝑛𝑑𝑒𝑛𝑡 𝐸𝑖𝑔𝑒𝑛 𝑣𝑒𝑐𝑡𝑜𝑟𝑠
+𝜆1 = 5 1 {[1,1]}
+𝜆2 = −1 1 {[1, −
+1
+2
+]}
+
+Problem 2. Write a program to find the eigen values and eigen vectors of the linear transformation
+𝑻:𝑹
+𝟐 ⟶ 𝑹
+𝟐 defined by 𝑻(𝒙, 𝒚) = (𝒚, 𝟎)
+
+Program: 
+T(x):=[x[2],0]$
+X:[x,y]$
+B:[[1,0],[0,1]]$
+L:makelist(T(B[i]),i,1,length(B))$
+M:transpose(apply('matrix,L))$
+[vals, vecs]:eigenvectors(M)$
+N:[["Eigen Value","Multiplicity","Linearly Independent Eigen vectors"]]$
+N(i):=[λ[i]=vals[1][i],vals[2][i],setify(vecs[i])]$
+for i thru length(vals[1]) do N:push(N(i),N)$
+print("Given Linear Transformation is T(x,y)=",T(X))$
+table_form(reverse(N))$
+
+Output:
+𝐺𝑖𝑣𝑒𝑛 𝐿𝑖𝑛𝑒𝑎𝑟 𝑇𝑟𝑎𝑛𝑠𝑓𝑜𝑟𝑚𝑎𝑡𝑖𝑜𝑛 𝑖𝑠 𝑇(𝑥, 𝑦) = [𝑦, 0]
+𝐸𝑖𝑔𝑒𝑛 𝑉𝑎𝑙𝑢𝑒 𝑀𝑢𝑙𝑡𝑖𝑝𝑙𝑖𝑐𝑖𝑡𝑦 𝐿𝑖𝑛𝑒𝑎𝑟𝑙𝑦 𝐼𝑛𝑑𝑒𝑝𝑒𝑛𝑑𝑒𝑛𝑡 𝐸𝑖𝑔𝑒𝑛 𝑣𝑒𝑐𝑡𝑜𝑟𝑠
+𝜆1 = 0 2 {[1,0]}
