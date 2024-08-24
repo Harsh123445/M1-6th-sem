@@ -1,0 +1,40 @@
+
+Program: 
+v:[1,2,3,5]$
+v1:[2,3,4,5]$
+v2:[-1,-2,-3,-4]$
+v3:[6,7,8,9]$
+S:[v1,v2,v3]$
+a:[α,β,γ]$
+M:linsolve(S.a-v,a)$
+print("Given set of vectors is S=",setify(S))$
+print("Given vector is v=",v)$
+if M=[] then print("v is not in L(S)")
+else print("v is in L(S)") and print(" Required Linear combination is v=", M.['v1,'v2,'v3])$
+
+Output:
+𝐺𝑖𝑣𝑒𝑛 𝑠𝑒𝑡 𝑜𝑓 𝑣𝑒𝑐𝑡𝑜𝑟𝑠 𝑖𝑠 𝑆 = {[−1, −2, −3, −4],[2,3,4,5],[6,7,8,9]}
+𝐺𝑖𝑣𝑒𝑛 𝑣𝑒𝑐𝑡𝑜𝑟 𝑖𝑠 𝑣 = [1,2,3,5]
+𝑣 𝑖𝑠 𝑛𝑜𝑡 𝑖𝑛 𝐿(𝑆)
+
+Problem 2. Check whether 𝑣 = (2,4,3) is in 𝐿(𝑆) or not and express it as a linear combination of 
+vectors of 𝑆 if it is in 𝐿(𝑆) where 𝑆 = {(1, −1,0), (0,2,1)} ⊆ 𝑅
+3
+
+Program: 
+v:[2,4,3]$
+v1:[1,-1,0]$
+v2:[0,2,1]$
+S:[v1,v2]$
+a:[α,β]$
+M:linsolve(S.a-v,a)$
+print("Given set of vectors is S=",setify(S))$
+print("Given vector is v=",v)$
+if M=[] then print("v is not in L(S)")
+else print("v is in L(S)") and print(" Required Linear combination is v=", M.['v1,'v2])$
+
+Output:
+𝐺𝑖𝑣𝑒𝑛 𝑠𝑒𝑡 𝑜𝑓 𝑣𝑒𝑐𝑡𝑜𝑟𝑠 𝑖𝑠 𝑆 = {[0,2,1],[1, −1,0]}
+𝐺𝑖𝑣𝑒𝑛 𝑣𝑒𝑐𝑡𝑜𝑟 𝑖𝑠 𝑣 = [2,4,3]
+𝑣 𝑖𝑠 𝑖𝑛 𝐿(𝑆)
+𝑅𝑒𝑞𝑢𝑖𝑟𝑒𝑑 𝐿𝑖𝑛𝑒𝑎𝑟 𝑐𝑜𝑚𝑏𝑖𝑛𝑎𝑡𝑖𝑜𝑛 𝑖𝑠 𝑣 = 𝑣2𝛽 + 𝑣1𝛼 = 3𝑣2 + 2𝑣1
